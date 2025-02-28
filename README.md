@@ -66,12 +66,12 @@ The authors would like to thank the great open-source communities, including the
 If you find our paper or code useful, it would be highly appreciated if you could consider citing our work by:
 
 ```bibtex
-@misc{xiong2024rlhflowmath,
+@misc{xiong2025selfrewardingcorrectionmathematicalreasoning,
+      title={Self-rewarding correction for mathematical reasoning}, 
       author={Wei Xiong and Hanning Zhang and Chenlu Ye and Lichang Chen and Nan Jiang and Tong Zhang},
-  title = {Self-rewarding Correction for Mathematical Reasoning},
-  year = {2025},
-  publisher = {GitHub},
-  journal = {GitHub repository},
-  howpublished = {\url{https://github.com/RLHFlow/Self-rewarding-reasoning-LLM}}
+      year={2025},
+      eprint={2502.19613},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2502.19613}, 
 }
-
