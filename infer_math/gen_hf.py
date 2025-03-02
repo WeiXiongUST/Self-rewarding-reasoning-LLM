@@ -106,8 +106,8 @@ else:
 ds = ds.map(
     lambda x: {
         "prompt": tokenizer.apply_chat_template(
-            [{"role":"user","content":x[script_args.dataset_key] + f' Let\'s think step by step and output the final answer within \\boxed{{}}'}], 
-            #x['prompt_messages'],
+            #[{"role":"user","content":x[script_args.dataset_key] + f' Let\'s think step by step and output the final answer within \\boxed{{}}'}], 
+            x['prompt_messages'],
             tokenize=False, add_generation_prompt=True)
     }
 )
@@ -129,7 +129,7 @@ completions = []
 used_prompts = []
 gathered_data = []
 for i, output in enumerate(outputs):
-    tmp_data = {"prompt": ds[i]['prompt'], "responses": [out.text for out in output.outputs], "gt":ds[i]['gt']}
+    tmp_data = {"prompt_messages": ds[i]['prompt_messages'], "answers": [out.text for out in output.outputs], "gt":ds[i]['gt']}
     gathered_data.append(tmp_data)
 
 

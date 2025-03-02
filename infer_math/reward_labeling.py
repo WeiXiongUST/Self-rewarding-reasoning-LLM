@@ -1612,7 +1612,7 @@ from tqdm import tqdm
 all_data = []
 for sample in tqdm(ds):
     rewards = []
-    for ans in sample['responses']:
+    for ans in sample['answers']:
         if is_equal(ans, sample['gt']) > 0:
             rewards.append(1.0)
         elif "\\boxed" in ans:
