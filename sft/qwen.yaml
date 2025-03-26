@@ -7,7 +7,7 @@ strict: false
 
 chat_template: qwen_25
 datasets:
-  - path: RLHFlow/self_rewarding_ift_example
+  - path: dsrselfcorr/score_warmup
     type: chat_template
     field_messages: conversations
     message_field_role: role
@@ -19,7 +19,7 @@ datasets:
 
 dataset_prepared_path:
 val_set_size: 0.0
-output_dir: ./outputs/self_rewarding_ift
+output_dir: ./outputs/kumar_ift
 
 sequence_len: 8192
 sample_packing: true
@@ -34,7 +34,7 @@ wandb_log_model:
 
 gradient_accumulation_steps: 4
 micro_batch_size: 1
-num_epochs: 3
+num_epochs: 1
 optimizer: paged_adamw_32bit
 lr_scheduler: cosine
 learning_rate: 1e-5
